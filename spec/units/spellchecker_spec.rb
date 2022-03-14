@@ -16,6 +16,10 @@ describe 'spellcheck' do
   end
 
   it 'raises an error when input is not a String' do
-    expect { spellcheck(0) }.to raise_error("Incorrect data type. Must be a String.")
+    expect { spellcheck(0) }.to raise_error('Incorrect input type: must be a String.')
+  end
+
+  it 'should be case-agnostic' do
+    expect(spellcheck('these Words are spnelt Correclty')).to eq 'these Words are ~spnelt~ ~Correclty~'
   end
 end
