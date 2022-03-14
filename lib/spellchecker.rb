@@ -8,4 +8,4 @@ def spellcheck(input)
   end
 end
 
-DICTIONARY_ARRAY = ["These", "spelt"]
+DICTIONARY_ARRAY = %w[These words are spelt correctly].freeze
