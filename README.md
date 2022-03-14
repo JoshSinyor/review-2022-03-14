@@ -34,17 +34,18 @@ This project requires Ruby 3.0.0. If you do not have Ruby 3.0.0, install it usin
 
 ## Specification
 
-1. The purpose of this program is to accept input and product output.
-2. When the program receives input *a*, it should output *x* as an `Integer`.
-3. When the program receives input *b*, it should output *y* as a `String`.
-4. When the program receives input that is neither *a* nor *b*, it should output *z*.
+1. This program is a spellchecker for a word processor.
+2. Input will be a `String` of words of any length.
+3. Incorrectly spelled words should be bracketed with tilde symbols.
+4. The reference dictionary should be British English.
+5. If what is input is not a string, the error "Incorrect data type. Must be a String." should be raised.
 
 ### Input/Output Table
 
 | Input | Output |
 |-------|--------|
-| *a* | `x` |
-| *b* | `y` |
+| "These words are spnelt correclty" | "These words are ~spnelt~ ~correclty~" |
+| "These words are spelt correctly" | "These words are spelt correctly" |
 | *c* | `z` |
 
 ---
@@ -61,9 +62,8 @@ This program must:
 
 | Input | Output |
 |-------|--------|
-| *aa* | `xx` |
-| *ab* | `yy` |
-| *abc* | `xyz` |
+| "These words are spnelt correclty" | "These words are ~spnelt~ ~correclty~" |
+| "These words are spelt correctly" | "These words are spelt correctly" |
 
 ---
 
