@@ -22,4 +22,8 @@ describe 'spellcheck' do
   it 'should be case-agnostic' do
     expect(spellcheck('these Words are spnelt Correclty')).to eq 'these Words are ~spnelt~ ~Correclty~'
   end
+
+  it 'should preserve capitalisation, punctuation and special characters' do
+    expect(spellcheck('These words: "spnelt correclty?"')).to eq 'These words: ~"spnelt~ ~correclty?"~'
+  end
 end

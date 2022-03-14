@@ -38,7 +38,9 @@ This project requires Ruby 3.0.0. If you do not have Ruby 3.0.0, install it usin
 2. Input will be a `String` of words of any length.
 3. Incorrectly spelled words should be bracketed with tilde symbols.
 4. The reference dictionary should be supplied by the user.
-5. If what is input is not a string, the error "Incorrect input type: must be a String." should be raised.
+5. The spellchecker should be case-agnostic.
+6. If input is not a string, the error "Incorrect input type: must be a String." should be raised.
+7. Capitalisation, punctuation and special characters should be preserved.
 
 ---
 
@@ -47,7 +49,9 @@ This project requires Ruby 3.0.0. If you do not have Ruby 3.0.0, install it usin
 This program must:
 
 1. [x] Upon input of "These words are spnelt correclty", output "These words are ~spnelt~ ~correclty~".
-2. [x] Upon input of something that is not a `String`, raise error `Incorrect input type: must be a String.`.
+2. [x] Upon input of "these Words are spnelt Correclty", output "these Words are ~spnelt~ ~Correclty~".
+3. [x] Upon input of something that is not a `String`, raise error `Incorrect input type: must be a String.`.
+4. [x] Upon input of "These Words: spnelt correclty?", output "These Words: ~spnelt~ ~correclty?~"
 
 ### Input/Output Table
 
@@ -55,6 +59,7 @@ This program must:
 |-------|--------|
 | "These words are spnelt correclty" | "These words are ~spnelt~ ~correclty~" |
 | ["These words are spelt correctly"] | Error `Incorrect input type: must be a String.` |
+| "These Words: spelt correclty?" | "These Words: spelt ~correclty?~"
 
 ---
 

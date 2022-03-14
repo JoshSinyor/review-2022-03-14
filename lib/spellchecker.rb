@@ -10,7 +10,10 @@ end
 private
 
 def highlight_errors(sentence)
-  sentence.map { |word| (DICTIONARY.include? word.downcase) ? word : "~#{word}~" }
+  sentence.map do |word|
+    escaped_word = word.gsub(/[^a-zA-Z]/, '').downcase
+    DICTIONARY.include?(escaped_word) ? word : "~#{word}~"
+  end
 end
 
 DICTIONARY = %w[these words are spelt correctly].freeze
