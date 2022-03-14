@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 def spellcheck(sentence)
+  raise "Incorrect data type. Must be a String." unless sentence.is_a? String
   sentence = sentence.split
   highlight_errors(sentence)
   sentence.join(' ')
