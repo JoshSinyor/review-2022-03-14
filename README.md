@@ -12,7 +12,6 @@ This repository reflects Makers coding review 3, conducted 14/03/2022.
 
 - [Installation](#installation)
 - [Specification](#specification)
-  * [Input/Output Table](#input-output-table)
 - [Acceptance Criteria](#acceptance-criteria)
   * [Input/Output Table](#input-output-table)
 - [Final Appearance](#final-appearance)
@@ -55,17 +54,15 @@ This program must:
 
 ### Input/Output Table
 
-| Input | Output |
-|-------|--------|
-| "These words are spnelt correclty" | "These words are ~spnelt~ ~correclty~" |
+| Input                               | Output                                          |
+|-------------------------------------|-------------------------------------------------|
+| "These words are spnelt correclty"  | "These words are ~spnelt~ ~correclty~"          |
 | ["These words are spelt correctly"] | Error `Incorrect input type: must be a String.` |
-| "These Words: spelt correclty?" | "These Words: spelt ~correclty?~"
+| "These Words: spelt correclty?"     | "These Words: spelt ~correclty?~"               |
 
 ---
 
 ## Final Appearance
-
-To take a screenshot of the window in Windows, use shortcut `⊞ + Shift + S`. To take a screenshot of the window on OSX, use shortcut `Shift + ⌘ + 5`.
 
 This program is pictured below executing the instructions in the Acceptance Criteria.
 
